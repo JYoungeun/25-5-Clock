@@ -7,8 +7,11 @@
     color: white;
 }
 
-#clock {
+body {
     background-color: rgb(27, 67, 60);
+}
+
+#clock {
     display: flex;
     flex-direction: column;
     justify-content: center;
