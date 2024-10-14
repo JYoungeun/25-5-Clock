@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 *, ::before, ::after {
+    font-family: Spectral, sans-serif;
     box-sizing: border-box;
     overflow: hidden;
+    color: white;
 }
 
 #clock {
+    background-color: rgb(27, 67, 60);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,10 +17,136 @@
     height: 100vh;
 }
 
-#break-session {
-    display: flex;
+h1 {
+    font-size: 3.5rem;
 }
 
-#time-controls {
+p {
+    margin: -3rem 0 1.5rem;
+    font-size: 1.25rem;
+}
+
+#break-session {
     display: flex;
+    font-size: 1.5rem;
+    margin: 0 0 2rem;
+}
+
+#break-label {
+    margin-right: 7.5rem;
+}
+
+button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+#timer-controls {
+    display: flex;
+    margin-top: -1.5rem;
+}
+
+#break-increment {
+    margin-right: 4.5rem;
+}
+
+#session-decrement {
+    margin-left: 4.5rem;
+}
+
+#timer {
+    margin: 1.5rem 0 0;
+}
+
+#timer-label {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#time-left {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.arrow-button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+.arrow-button.up::after {
+    content: '';
+    position: absolute;
+    top: 0.3rem;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid white;
+}
+
+.arrow-button.down::after {
+    content: '';
+    position: absolute;
+    top: 0.3rem;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid white;
+}
+
+#start-stop-reset {
+    display: flex;
+    flex-direction: row;   
+}
+
+#start_stop {
+    width: 3.6rem;
+    height: 3.6rem;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    margin-right: -1rem;
+    top: -0.095rem;
+}
+  
+#start_stop::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-left: 1.2rem solid white;
+    border-top: 0.6rem solid transparent;
+    border-bottom: 0.6rem solid transparent;
+    transform: translate(-95%, -50%);
+}
+  
+#start_stop.playing::before {
+    display: none;
+}
+
+#start_stop.playing::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: white;
+    transform: translate(-50%, -50%);
+}
+
+.reset-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.44rem;
 }
