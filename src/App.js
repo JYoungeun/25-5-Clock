@@ -12,6 +12,8 @@ function App() {
 
   const handleStartStop = () => {
     setIsPlaying(!isPlaying);
+    const beep = document.getElementById('beep');
+    beep.load();
   };
 
   useEffect(() => {
